@@ -1,16 +1,19 @@
-import Logo from "./Logo";
-import AppNav from "./AppNav";
-import styles from "./Sidebar.module.css";
 import { Outlet } from "react-router-dom";
+import AppNav from "./AppNav";
+import Logo from "./Logo";
+import styles from "./Sidebar.module.css";
+
 function Sidebar() {
   return (
     <div className={styles.sidebar}>
       <Logo />
       <AppNav />
+
       <Outlet />
+
       <footer className={styles.footer}>
         <p className={styles.copyright}>
-          &copy; CopyRight {new Date().getFullYear()} by world Wise Inc.
+          &copy; Copyright {new Date().getFullYear()} by WorldWise Inc.
         </p>
       </footer>
     </div>
